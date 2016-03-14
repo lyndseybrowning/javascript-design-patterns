@@ -1,32 +1,32 @@
 const Calculator = (sum = 0) => {
 
-  const obj = Object.create(null);
+  const obj = {
+    add(n) {
+      sum += n;
+      return this;
+    },
 
-  obj.add = function(n) {
-    sum += n;
-    return this;
-  };
+    subtract(n) {
+      sum -= n;
+      return this;
+    },
 
-  obj.subtract = function(n) {
-    sum -= n;
-    return this;
-  };
+    multiply(n) {
+      sum *= n;
+      return this;
+    },
 
-  obj.multiply = function(n) {
-    sum *= n;
-    return this;
-  };
+    divide(n) {
+      sum /= n;
+      return this;
+    },
 
-  obj.divide = function(n) {
-    sum /= n;
-    return this;
-  }
-
-  obj.get = (callback) => {
-    if(callback) {
-      return callback(sum);
+    get(callback) {
+      if(callback) {
+        return callback(sum);
+      }
+      return sum;
     }
-    return sum;
   };
 
   return obj;

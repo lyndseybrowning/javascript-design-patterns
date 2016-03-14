@@ -4,33 +4,29 @@ var Calculator = function Calculator() {
   var sum = arguments.length <= 0 || arguments[0] === undefined ? 0 : arguments[0];
 
 
-  var obj = Object.create(null);
-
-  obj.add = function (n) {
-    sum += n;
-    return this;
-  };
-
-  obj.subtract = function (n) {
-    sum -= n;
-    return this;
-  };
-
-  obj.multiply = function (n) {
-    sum *= n;
-    return this;
-  };
-
-  obj.divide = function (n) {
-    sum /= n;
-    return this;
-  };
-
-  obj.get = function (callback) {
-    if (callback) {
-      return callback(sum);
+  var obj = {
+    add: function add(n) {
+      sum += n;
+      return this;
+    },
+    subtract: function subtract(n) {
+      sum -= n;
+      return this;
+    },
+    multiply: function multiply(n) {
+      sum *= n;
+      return this;
+    },
+    divide: function divide(n) {
+      sum /= n;
+      return this;
+    },
+    get: function get(callback) {
+      if (callback) {
+        return callback(sum);
+      }
+      return sum;
     }
-    return sum;
   };
 
   return obj;

@@ -1,5 +1,8 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 var Calculator = function Calculator() {
   var sum = arguments.length <= 0 || arguments[0] === undefined ? 0 : arguments[0];
 
@@ -32,6 +35,4 @@ var Calculator = function Calculator() {
   return obj;
 };
 
-var calc = Calculator().add(10).add(9).add(1).multiply(100).divide(2).get();
-
-console.log(calc);
+exports.default = Calculator;

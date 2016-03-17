@@ -1,4 +1,4 @@
-import Calculator from './chaining';
+import Calculator from './calculator';
 
 let calc = Calculator()
 .add(10)

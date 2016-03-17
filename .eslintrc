@@ -2,11 +2,11 @@
   "rules": {
     "strict" : 0,
     "indent": [2, 2],
-    "quotes": [2, "single"],
+    "quotes": [0, "single", "avoid-escape"],
     "no-console": 0
   },
   "env": {
-      "browser": false,
+      "browser": true,
       "node": true,
       "es6": true
   },

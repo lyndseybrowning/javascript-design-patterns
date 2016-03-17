@@ -10,7 +10,10 @@
       "node": true,
       "es6": true
   },
-  ecmaFeatures: {
+  "ecmaFeatures": {
     "modules": true
+  },
+  "parserOptions": {
+    "sourceType": "module"
   }
 }

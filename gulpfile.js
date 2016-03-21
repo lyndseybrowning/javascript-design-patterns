@@ -6,7 +6,7 @@ const babel = require('gulp-babel');
 
 const paths = {
   build: 'build/',
-  js: 'src/**/*.js'
+  js: 'src/**'
 };
 
 gulp.task('script', function() {

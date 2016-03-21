@@ -13,7 +13,8 @@ const repo = function() {
     console.log(`saving ${task.name} to the db`);
   };
 
-  // revealing module pattern
+  console.log('newing up task repo');
+
   return {
     get: get,
     save: save

@@ -8,15 +8,15 @@ const repoFactory = function() {
       let repo = null;
 
       switch(repoType) {
-        case 'task':
-          repo = taskRepo;
-          break;
-        case 'user':
-          repo = userRepo;
-          break;
-        case 'project':
-          repo = projectRepo;
-          break;
+      case 'task':
+        repo = taskRepo;
+        break;
+      case 'user':
+        repo = userRepo;
+        break;
+      case 'project':
+        repo = projectRepo;
+        break;
       }
 
       return repo;

@@ -10,4 +10,7 @@ const repo = () => {
   return { save };
 };
 
-export default repo;
+// by calling the function at export,
+// we create a singleton and only one instance of the
+// repo exists due to caching of the module
+export default repo();

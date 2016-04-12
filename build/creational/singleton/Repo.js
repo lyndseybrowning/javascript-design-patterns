@@ -15,4 +15,7 @@ var repo = function repo() {
   return { save: save };
 };
 
-exports.default = repo;
+// by calling the function at export,
+// we create a singleton and only one instance of the
+// repo exists due to caching of the module
+exports.default = repo();

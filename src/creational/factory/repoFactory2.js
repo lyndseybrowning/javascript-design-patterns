@@ -2,7 +2,7 @@ import taskRepo from './taskRepository';
 import userRepo from './userRepository';
 import projectRepo from './projectRepository';
 
-const repoFactory = function() {
+const repoFactory = () => {
   return {
     task: taskRepo,
     user: userRepo,

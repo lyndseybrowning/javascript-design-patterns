@@ -25,6 +25,9 @@ const TaskService = (function() {
     }
 })();
 
+// facade
+// hides the complicated functionality of TaskServiceWrapper
+// and creates a better interface
 const TaskServiceWrapper = (function() {
     let completeAndNotify = (task) => {
         TaskService.complete(task);
@@ -45,6 +48,7 @@ let myTask = new Task({
     user: 'Jon',
     completed: false
 });
+
 TaskServiceWrapper.completeAndNotify(myTask);
 
 console.log(myTask);
